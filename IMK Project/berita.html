@@ -84,6 +84,27 @@
   z-index: 0;
 }
 
+.hero-section {
+  height: 173px; /* Sesuaikan dengan gambar pertama */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Penting: menjaga rasio gambar tapi tetap penuh */
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
   .hero h1,
   .hero p {
   position: relative;
@@ -228,8 +249,12 @@
 
 <!-- Hero -->
 <section class="hero">
-  <h1>BERITA</h1>
-  <p>Temukan berita terkini seputar logistik maritim, perkembangan layanan CargoWave, inovasi teknologi, dan kemitraan strategis untuk mendukung distribusi ke seluruh wilayah Kepulauan Riau.</p>
+ <div class="hero-section">
+  <div class="hero-content">
+    <h1>BERITA</h1>
+     <p>Temukan berita terkini seputar logistik maritim, perkembangan layanan CargoWave, inovasi teknologi, dan kemitraan strategis untuk mendukung distribusi ke seluruh wilayah Kepulauan Riau.</p>
+  </div>
+</div>
 </section>
 
 <!-- Artikel Populer -->
