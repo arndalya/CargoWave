@@ -93,7 +93,28 @@
   backdrop-filter: blur(3px);
   background-color: rgba(0, 0, 0, 0.3); /* lapisan gelap semi transparan */
   z-index: 0;
-  }
+  } 
+
+  .hero-section {
+  height: 173px; /* Sesuaikan dengan gambar pertama */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Penting: menjaga rasio gambar tapi tetap penuh */
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
 
   .hero h1,
   .hero p {
@@ -270,7 +291,7 @@
     </div>
     <ul class="navbar-menu">
       <li><a href="beranda.html">Beranda</a></li>
-      <li><a href="#">Layanan ▾</a></li>
+      <li><a href="layanan.html">Layanan ▾</a></li>
       <li><a href="#">Informasi ▾</a></li>
       <li><a href="berita.html">Berita</a></li>
       <li><a href="#">Kontak</a></li>
@@ -284,8 +305,12 @@
 
   <!-- Hero Section -->
   <section class="hero">
+  <div class="hero-section">
+  <div class="hero-content">
     <h1>TENTANG KAMI</h1>
     <p>CargoWave adalah perusahaan jasa pengiriman cargo cepat melalui layanan Cargo laut...</p>
+    </div>
+</div>
   </section>
 
   <!-- Tentang CargoWave -->
