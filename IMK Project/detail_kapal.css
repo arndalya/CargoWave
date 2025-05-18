@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Font dan Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header Brand Satria Jaya */
+.navbar {
+    background-color: #d9f6fd;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 104px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar-logo img {
+    height: 40px;
+    width: 104px;
+    display: block;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    padding: 8px 104px;
+    align-items: center;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #0950A1;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  font-family: 'Inter', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li a.active {
+  color: #FFA630;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.header p {
+    font-size: 1rem;
+    margin-top: 4px;
+}
+
+/* Footer */
+footer {
+    background-color: #003049;
+    padding: 8px 104px;
+    text-align: center;
+}
+
+.footer-sosmed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.footer-sosmed a svg {
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-sosmed a:hover svg {
+    color: #0d3b66;
+}
+
+footer p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    .footer-sosmed a svg {
+        width: 28px;
+        height: 28px;
+    }
+}
