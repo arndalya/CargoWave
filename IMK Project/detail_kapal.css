@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
 /* Font dan Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
     background-color: #fff;
     color: #222;
     line-height: 1.6;
@@ -17,11 +15,15 @@ body {
 /* Header Brand Satria Jaya */
 .navbar {
     background-color: #d9f6fd;
-    display: flex;
-    justify-content: space-between;
+}
+
+.container {
+    max-width: 1231px;
+    margin: 0 auto;
     padding: 8px 104px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar-logo img {
@@ -44,7 +46,7 @@ body {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.5%;
   font-family: 'Inter', sans-serif;
   transition: color 0.3s ease;
 }
@@ -54,7 +56,9 @@ body {
 }
 
 .header h1 {
-    font-size: 2rem;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.1%;
     font-weight: 700;
 }
 
@@ -68,6 +72,11 @@ footer {
     background-color: #003049;
     padding: 8px 104px;
     text-align: center;
+}
+
+footer img {
+    width: 104px;
+    height: 40px;
 }
 
 .footer-sosmed {
