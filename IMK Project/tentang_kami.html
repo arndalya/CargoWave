@@ -4,313 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tentang Kami - CargoWave</title>
+  <link rel="stylesheet" href="css/tentang_kami.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #F5F7FA;
-      color: #000;
-    }
-
-    /* Navbar Styles */
-    .navbar {
-      background-color: #d9f6fd;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-
-    .navbar-logo img {
-      height: 40px;
-    }
-
-    .navbar-menu {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar-menu li a {
-      text-decoration: none;
-      color: #003355;
-      font-weight: 500;
-      font-size: 16px;
-    }
-
-    .navbar-menu li a.active {
-      color: #ff8000;
-    }
-
-    .navbar-buttons {
-      display: flex;
-      gap: 10px;
-    }
-
-    .btn-outline {
-      background-color: transparent;
-      border: 1px solid #003355;
-      color: #003355;
-      padding: 5px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .btn-filled {
-      background-color: #003355;
-      color: white;
-      border: none;
-      padding: 5px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .btn-outline:hover,
-    .btn-filled:hover {
-      opacity: 0.9;
-    }
-
-    .hero {
-  position: relative;
-  background: url('gambar/kapal_hitam.jfif') center/cover no-repeat;
-  text-align: center;
-  padding: 5rem 1rem;
-  color: white;
-  overflow: hidden;
-  }
-
-  .hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(3px);
-  background-color: rgba(0, 0, 0, 0.3); /* lapisan gelap semi transparan */
-  z-index: 0;
-  } 
-
-  .hero-section {
-  height: 173px; /* Sesuaikan dengan gambar pertama */
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-section img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Penting: menjaga rasio gambar tapi tetap penuh */
-}
-
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-}
-
-  .hero h1,
-  .hero p {
-  position: relative;
-  z-index: 1;
-  }
-    .about-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 30px;
-      border-radius: 12px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .about-text {
-      flex: 1 1 50%;
-      padding-right: 20px;
-    }
-
-    .about-text h2 {
-      font-size: 24px;
-      text-align: center;
-      font-weight: bold;
-      color: #000000;
-      margin-bottom: 16px;
-    }
-
-    .about-text p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #333333;
-      margin-bottom: 16px;
-    }
-
-    .about-image {
-      flex: 1 1 45%;
-    }
-
-    .about img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-
-    .visi-misi {
-      background-color: #d9f6fd;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .visi-misi h2 {
-      font-size: 24px;
-      font-weight: bold;
-      color: #000;
-      margin-bottom: 30px;
-    }
-
-    .box {
-      background-color: white;
-      padding: 25px;
-      margin: 10px auto;
-      border-radius: 10px;
-      max-width: 800px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
-
-    .box h3 {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .box p {
-      margin: 0;
-      font-size: 15px;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    .section {
-      padding: 3rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .team {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-    
-    .team {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.member {
-  background: #fff;
-  padding: 1rem;
-  border: 1px solid #D9D9D9;
-  border-radius: 12px;
-  width: 220px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 320px; /* Set tinggi tetap */
-  box-sizing: border-box;
-}
-
-.member img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.member h4 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 10px 0 5px;
-}
-
-.member p {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
-}.site-footer {
-  background-color: #003355;
-  color: white;
-  padding: 1rem 2rem;
-}
-
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.footer-logo {
-  height: 35px;
-}
-
-.footer-center {
-  text-align: center;
-  flex: 1;
-  font-size: 14px;
-}
-
-.footer-right a {
-  margin-left: 12px;
-}
-
-.footer-right img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-}
-
-  </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="navbar-logo">
-      <img src="gambar/Logo.png" alt="Logo" />
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-logo">
+        <img src="gambar/Logo.png" alt="Logo">
+      </div>
+      <nav>
+        <ul class="navbar-menu">
+          <li><a href="beranda.html">Beranda</a></li>
+          <li><a href="layanan.html">Layanan</a></li>
+          <li><a href="#">Informasi ▾</a></li>
+          <li><a href="berita.html">Berita</a></li>
+          <li><a href="#">Kontak</a></li>
+          <li><a href="tentang_kami.html" class="active">Tentang Kami</a></li>
+        </ul>
+      </nav>
     </div>
-    <ul class="navbar-menu">
-      <li><a href="beranda.html">Beranda</a></li>
-      <li><a href="layanan.html">Layanan</a></li>
-      <li><a href="#">Informasi ▾</a></li>
-      <li><a href="berita.html">Berita</a></li>
-      <li><a href="#">Kontak</a></li>
-      <li><a href="#" class="active">Tentang Kami</a></li>
-    </ul>
-    <div class="navbar-buttons">
-      <button class="btn-outline">Login</button>
-      <button class="btn-filled">Daftar</button>
-    </div>
-  </nav>
+  </header>
 
   <!-- Hero Section -->
   <section class="hero">
-  <div class="hero-section">
-  <div class="hero-content">
-    <h1>TENTANG KAMI</h1>
-    <p>CargoWave adalah perusahaan jasa pengiriman cargo cepat melalui layanan Cargo laut...</p>
+    <div class="layer lapisan-hitam-dasar"></div>
+    <div class="layer lapisan-gambar"></div>
+    <div class="layer lapisan-hitam-atas"></div>
+    <div class="hero-content">
+      <h1>TENTANG KAMI</h1>
+      <p>
+        CargoWave adalah perusahaan jasa pengiriman cargo cepat melalui layanan Cargo laut. Berpengalaman sejak 2020, Dengan jaringan Tanjungpinang dan agen perwakilan di berbagai kota lainnya. Menghubungkan lebih cepat, aman, dan efisien. 
+      </p>
     </div>
-</div>
   </section>
 
   <!-- Tentang CargoWave -->
@@ -326,7 +54,7 @@
         </p>
       </div>
       <div class="about-image">
-        <img src="gambar/Kapal_merah.jfif" alt="Kapal Cargo">
+        <img src="gambar/Tentang CargoWave.png" alt="Kapal Cargo">
       </div>
     </div>
   </section>
@@ -353,22 +81,22 @@
     <h2>Our Team</h2>
     <div class="team">
       <div class="member">
-        <img src="gambar/ceysha.jpeg" alt="Ceysha">
+        <img src="gambar/ceysha.jpeg" alt="Ceysha Diva Ratu Pramudya">
         <h4>Ceysha Diva Ratu Pramudya</h4>
         <p>Chief Executive Officer (CEO)</p>
       </div>
       <div class="member">
-        <img src="gambar/amel.jpeg" alt="Amelia">
+        <img src="gambar/Amelia.jpg" alt="Amelia">
         <h4>Amelia</h4>
         <p>Chief Tech Officer (CTO)</p>
       </div>
       <div class="member">
-        <img src="arinda.jpg" alt="Arinda">
+        <img src="gambar/arinda.jpg" alt="Arinda Amalia Putri">
         <h4>Arinda Amalia Putri</h4>
         <p>Chief Marketing Officer (CMO)</p>
       </div>
       <div class="member">
-        <img src="cindi.jpg" alt="Cindi">
+        <img src="gambar/cindi.jpg" alt="Cindi Claudia">
         <h4>Cindi Claudia</h4>
         <p>Head of Operation</p>
       </div>

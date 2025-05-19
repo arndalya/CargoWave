@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+}
+
+/* Navbar Container */
+.navbar {
+    background-color: #CAF0F8;
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Kontainer untuk isi navbar */
+.navbar .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.navbar-logo img {
+    height: 40px;
+}
+
+/* Menu Navbar */
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 20%;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: #0950A1;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Hover effect */
+.navbar-menu li a:hover {
+    background-color: #90E0EF;
+    color: #03045E;
+}
+
+/* Link aktif */
+.navbar-menu li a.active {
+    color: #FFA630;
+}

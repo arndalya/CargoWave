@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beranda - CargoWave</title>
-  <link rel="stylesheet" href="beranda.css">
+  <link rel="stylesheet" href="css/beranda.css">
   <script src="beranda.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <script>
@@ -36,29 +37,34 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="navbar-logo">
-      <img src="gambar/logo.png" alt="Logo">
-    </div>
-    <ul class="navbar-menu">
-      <li><a href="beranda.html" class="active">Beranda</a></li>
-      <li><a href="#">Layanan</a></li>
-      <li><a href="#">Informasi ▾</a></li>
-      <li><a href="berita.html" >Berita</a></li>
-      <li><a href="#">Kontak</a></li>
-      <li><a href="tentang_kami.html">Tentang Kami</a></li>
-    </ul>
-    <div class="navbar-buttons">
-      <button class="btn-outline">Masuk</button>
-      <button class="btn-filled">Daftar</button>
-    </div>
-  </nav>
+  <header class="navbar">
+      <div class="container">
+        <div class="navbar-logo">
+        <img src="gambar/Logo.png" alt="Logo">
+      </div>
+      <nav>
+        <ul class="navbar-menu">
+          <li><a href="beranda.html" class="active">Beranda</a></li>
+          <li><a href="#">Layanan</a></li>
+          <li><a href="#">Informasi ▾</a></li>
+          <li><a href="berita.html">Berita</a></li>
+          <li><a href="#">Kontak</a></li>
+          <li><a href="tentang_kami.html">Tentang Kami</a></li>
+        </ul>
+      </nav>
+  </header>
 
-   <!-- Hero -->
+   <!-- Hero Section-->
   <section class="hero">
-    <h1>Selamat Datang di CargoWave</h1>
-    <p>Tingkatkan logistik Anda dengan layanan pengiriman laut kami - cepat, aman, dan hemat biaya, melewati ekspektasi.</p>
-    <a href="#">Lacak ➤</a>
+    <div class="layer lapisan-hitam-dasar"></div>
+    <div class="layer lapisan-gambar"></div>
+    <div class="layer lapisan-hitam-atas"></div>
+    <div class="hero-content">
+      <h3>Selamat Datang di</h3>
+      <h1>CargoWave</h1> 
+      <p>Tingkatkan logistik Anda dengan layanan pengiriman laut kami - cepat, aman, dan hemat biaya, melewati ekspektasi.</p>
+      <a href="#">Lacak ➤</a>
+    </div>
   </section>
 
    <!-- Fitur -->
@@ -100,25 +106,25 @@
 
     <div class="card-container">
       <div class="card">
-        <img src="gambar/kapal_menengah.png" alt="Kargo Menengah">
+        <img src="gambar/Kargo Menengah.png" alt="Kargo Menengah">
         <h4>Kargo Menengah</h4>
         <p>Digunakan untuk pengiriman barang ringan hingga sedang, ideal untuk pelaku UMKM dan distribusi lokal antarpulau kecil.</p>
         <button>Lihat Detail</button>
       </div>
       <div class="card">
-        <img src="gambar/kapal_sedang.png" alt="Kargo Sedang">
+        <img src="gambar/Kargo Sedang.png" alt="Kargo Sedang">
         <h4>Kargo Sedang</h4>
         <p>Cocok untuk kebutuhan logistik reguler seperti bahan pokok, barang industri, dan barang konsumsi skala menengah.</p>
         <button>Lihat Detail</button>
       </div>
       <div class="card">
-        <img src="gambar/kapal_besar.png" alt="Kargo Besar">
+        <img src="gambar/Kargo Besar.png" alt="Kargo Besar">
         <h4>Kargo Besar</h4>
         <p>Diprioritaskan bagi pengiriman barang dalam jumlah besar antar rute utama antarpulau besar seperti Batam dan Bintan.</p>
         <button>Lihat Detail</button>
       </div>
       <div class="card">
-        <img src="gambar/kapal_serbaguna.png" alt="Kargo Serbaguna">
+        <img src="gambar/Kargo Serbaguna.png" alt="Kargo Serbaguna">
         <h4>Kargo Serbaguna</h4>
         <p>Fleksibel untuk berbagai jenis muatan, mulai dari barang campuran, hingga logistik komersial kecil dengan jadwal yang konsisten.</p>
         <button>Lihat Detail</button>
