@@ -46,11 +46,21 @@
         <ul class="navbar-menu">
           <li><a href="beranda.html" class="active">Beranda</a></li>
           <li><a href="#">Layanan</a></li>
-          <li><a href="#">Informasi ▾</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Informasi ▾</a>
+            <ul class="dropdown-content">
+              <a href="#">Kargo Menengah</a>
+              <a href="#">Kargo Sedang</a>
+              <a href="#">Kargo Besar</a>
+              <a href="#">Kargo Serbaguna</a>
+              <a href="#">FAQ</a>
+            </ul>
+          </li>
           <li><a href="berita.html">Berita</a></li>
           <li><a href="#">Kontak</a></li>
           <li><a href="tentang_kami.html">Tentang Kami</a></li>
         </ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
       </nav>
   </header>
 
