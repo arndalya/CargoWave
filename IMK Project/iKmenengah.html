@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kargo Menengah - CargoWave</title>
+  <link rel="stylesheet" href="css/beranda.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffffff;
+    }
+
+    .cargo-section {
+      background-color: #ffffff;
+      margin-top: 104px;
+      padding: 40px 20px;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+
+    .card {
+      background-color: #cceeff;
+      width: 400px;
+      height: 472px;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card h4 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 16px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #000;
+      flex-grow: 1;
+      margin-bottom: 16px;
+    }
+
+    .card button {
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      background-color: #0950A1;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #073c7a;
+    }
+
+    .scroll-down {
+      position: fixed;
+      bottom: 16px;
+      right: 20px;
+      background-color: #0950A1;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+      animation: bounce 1.5s infinite;
+    }
+
+    .scroll-down img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* Footer override */
+    .site-footer {
+      background-color: #003049;
+      color: white;
+      padding: 1rem 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container">
+    <div class="navbar-logo">
+      <img src="gambar/Logo.png" alt="Logo">
+    </div>
+    <nav>
+      <ul class="navbar-menu">
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="#">Layanan</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn active">Informasi ▾</a>
+          <ul class="dropdown-content">
+            <a href="iKmenengah.html">Kargo Menengah</a>
+            <a href="iKsedang.html">Kargo Sedang</a>
+            <a href="iKbesar.html">Kargo Besar</a>
+            <a href="iKserbaguna.html">Kargo Serbaguna</a>
+            <a href="iFAQ.html">FAQ</a>
+          </ul>
+        </li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="#">Kontak</a></li>
+        <li><a href="tentang_kami.html">Tentang Kami</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="layer lapisan-hitam-dasar"></div>
+  <div class="layer" style="background: url('gambar/gambar hero section.png') center/cover no-repeat; z-index: 1;"></div>
+  <div class="layer lapisan-hitam-atas"></div>
+  <div class="hero-content">
+    <h1>INFORMASI</h1>
+    <p>Berikut adalah informasi kapal yang telah tersedia di layanan CargoWave untuk membantu anda dalam memilih kapal yang cocok untuk mengantar cargo anda sampai ke tujuan</p>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<div style="max-width: 1200px; margin: 20px auto 0; padding: 0 25px; font-size: 14px; color: #555;">
+  Beranda &gt;&gt; Kargo Menengah
+</div>
+
+<!-- KARGO MENENGAH SECTION -->
+<section class="cargo-section1">
+  <div class="card-container1">
+    <div class="card1">
+      <h4>KM Bintan Raya</h4>
+      <img src="gambar/KMBintanRaya.png" alt="KM Bintan Raya">
+      <p>Kapal kargo menengah yang melayani pengiriman dari <strong>Tanjung Balai Karimun ke Batam</strong>, cocok untuk distribusi bahan industri dan perlengkapan rumah tangga, dengan kebijakan tagihan minimum 100 kg.</p>
+      <button>Cek ketersediaan kapal</button>
+    </div>
+
+    <div class="card1">
+      <h4>MV Kepri Jaya</h4>
+      <img src="gambar/MVKepriJaya.png" alt="MV Kepri Jaya">
+      <p>Melayani pengangkutan dari <strong>Batam ke Natuna</strong>, kapal ini ideal untuk pengiriman barang proyek skala sedang dan kebutuhan logistik antar pulau. Berlaku tagihan minimum setara 100 kg.</p>
+      <button>Cek ketersediaan kapal</button>
+    </div>
+
+    <div class="card1">
+      <h4>KM Selat Karimun</h4>
+      <img src="gambar/KMSelatKarimun.png" alt="KM Selat Karimun">
+      <p>Kapal logistik menengah untuk pengiriman dari <strong>Lingga ke Tanjungpinang</strong>, cocok bagi UMKM dan distributor lokal, dengan kebijakan pengangkutan minimum 100 kg.</p>
+      <button>Cek ketersediaan kapal</button>
+    </div>
+  </div>
+</section>
+
+<!-- PANAH SCROLL -->
+<button class="scroll-down" onclick="window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });">
+  <img src="gambar/vector.png" alt="Scroll Down">
+</button>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="gambar/Logo cargowave.png" alt="CargoWave Logo" class="footer-logo">
+    </div>
+    <div class="footer-center">
+      <p>© 2025 Cargo Wave. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <a href="#"><img src="gambar/Instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="gambar/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="gambar/WA.png" alt="WhatsApp"></a>
+      <a href="#"><img src="gambar/linkin.png" alt="LinkedIn"></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
