@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -47,15 +47,15 @@
           <li><a href="beranda.html" class="active">Beranda</a></li>
           <li><a href="#">Layanan</a></li>
           <li class="dropdown">
-            <a href="#" class="dropbtn">Informasi ▾</a>
-            <ul class="dropdown-content">
-              <a href="iKmenengah.html">Kargo Menengah</a>
-              <a href="iKsedang.html">Kargo Sedang</a>
-              <a href="iKbesar.html">Kargo Besar</a>
-              <a href="iKserbaguna.html">Kargo Serbaguna</a>
-              <a href="iFAQ.html">FAQ</a>
-            </ul>
-          </li>
+          <a href="#">Informasi ▾</a>
+          <ul class="dropdown-content">
+            <a href="iKmenengah.html">Kargo Menengah</a>
+            <a href="iKsedang.html">Kargo Sedang</a>
+            <a href="iKbesar.html">Kargo Besar</a>
+            <a href="iKserbaguna.html">Kargo Serbaguna</a>
+            <a href="iFAQ.html">FAQ</a>
+          </ul>
+        </li>
           <li><a href="berita.html">Berita</a></li>
           <li><a href="#">Kontak</a></li>
           <li><a href="tentang_kami.html">Tentang Kami</a></li>
@@ -79,8 +79,9 @@
 
    <!-- Fitur -->
   <section class="features">
-    <h2>Mengapa Memilih Kami?</h2>
-    <p>Memanfaatkan kekuatan logistik yang sempurna, CargoWave hadir sebagai solusi terbaik untuk pengiriman tepat waktu, pelayanan prima, dan harga kompetitif.</p>
+    <h3>Mengapa Memilih Kami?</h3> </br>
+    <h2>Memanfaatkan Kekuatan Logistik yang Sempurna</h2>
+    <p>CargoWave hadir sebagai solusi terpercaya untuk pengiriman yang aman, efisien, dan tepat waktu. Kami menggabungkan teknologi modern dengan infrastruktur logistik yang luas, memastikan setiap pengiriman tiba sesuai harapan. </p>
     <div class="feature-grid">
       <div class="feature-item">
         <img src="gambar/WAKTU.png" alt="Ikon Tepat Waktu" style="width:40px; margin-bottom:10px;">
@@ -110,7 +111,7 @@
     <h3 class="subheading">Apa saja Jenis Kargo yang Tersedia?</h3>
     <h2 class="heading">Optimalisasi Pengiriman dengan Jenis Kargo yang Tepat</h2>
     <p class="description">
-      CargoWave menyediakan berbagai jenis kapal kargo yang dirancang untuk memenuhi kebutuhan logistik di wilayah Kepulauan Riau,
+      CargoWave menyediakan berbagai jenis kapal kargo yang dirancang untuk memenuhi kebutuhan logistik di wilayah Kepulauan Riau, 
       dengan sistem tarif minimum setara 100kg yang fleksibel dan terjangkau.
     </p>
 
@@ -119,73 +120,88 @@
         <img src="gambar/Kargo Menengah.png" alt="Kargo Menengah">
         <h4>Kargo Menengah</h4>
         <p>Digunakan untuk pengiriman barang ringan hingga sedang, ideal untuk pelaku UMKM dan distribusi lokal antarpulau kecil.</p>
-        <button>Lihat Detail</button>
+        <a href="iKmenengah.html" class="button-link">Lihat Detail</a>
       </div>
       <div class="card">
         <img src="gambar/Kargo Sedang.png" alt="Kargo Sedang">
         <h4>Kargo Sedang</h4>
         <p>Cocok untuk kebutuhan logistik reguler seperti bahan pokok, barang industri, dan barang konsumsi skala menengah.</p>
-        <button>Lihat Detail</button>
+        <a href="#" class="button-link">Lihat Detail</a>
       </div>
       <div class="card">
         <img src="gambar/Kargo Besar.png" alt="Kargo Besar">
         <h4>Kargo Besar</h4>
         <p>Diprioritaskan bagi pengiriman barang dalam jumlah besar antar rute utama antarpulau besar seperti Batam dan Bintan.</p>
-        <button>Lihat Detail</button>
+        <a href="#" class="button-link">Lihat Detail</a>
       </div>
       <div class="card">
         <img src="gambar/Kargo Serbaguna.png" alt="Kargo Serbaguna">
         <h4>Kargo Serbaguna</h4>
         <p>Fleksibel untuk berbagai jenis muatan, mulai dari barang campuran, hingga logistik komersial kecil dengan jadwal yang konsisten.</p>
-        <button>Lihat Detail</button>
+        <a href="#" class="button-link">Lihat Detail</a>
       </div>
     </div>
   </section>
 
   <!-- TESTIMONI -->
- <section style="background-color: #f4f7fa; padding: 2rem 0;">
-    <div style="text-align: center;">
-      <h3 style="margin: 0; color: #000;">Kenapa CargoWave?</h3>
-      <h2 style="margin: 0.5rem 0;">Testimoni Pengguna</h2>
-      <p style="margin-bottom: 2rem;">Apa kata pelanggan tentang layanan kami yang cepat, aman, dan terpercaya?</p>
-    </div>
-
+  <section class="testimonial-section">
+    <h2 class="testimonial-title">Apa Kata Klien Kami</h2>
     <div class="testimonial-wrapper">
       <div class="arrow" onclick="scrollTestimonials(-1)">&#8592;</div>
 
-      <div class="testimonial-container" id="testimonialContainer">
+      <div class="testimonial-track" id="testimonialContainer">
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <div class="quote">"Sangat puas dengan layanan Cargo Wave! Tim mereka responsif dan pengirimannya selalu tepat waktu. Rekomendasi banget buat yang butuh layanan logistik andal."</div>
-          <div class="profile">
-            <img src="gambar/cewe.jfif" alt="Rina">
+          <p>"CargoWave sangat membantu bisnis kami dalam pengiriman barang antar pulau."</p>
+          <div class="client-info">
+            <img src="gambar/cowo.jfif" alt="Client 1">
             <div>
-              <div class="profile-name">Rina Marlina</div>
-              <div class="profile-handle">@rina_marlina01</div>
+              <h4>Andi</h4>
+              <p>CEO, Andalas Tekstil</p>
             </div>
           </div>
         </div>
-
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <div class="quote">"Saya senang karena pengiriman saya tiba lebih cepat dari perkiraan. Smart ETA dari CargoWave benar-benar membantu perencanaan logistik kami!"</div>
-          <div class="profile">
-            <img src="gambar/cowo.jfif" alt="Budi">
+          <p>"Layanan cepat, aman, dan terpercaya. Sangat direkomendasikan!"</p>
+          <div class="client-info">
+            <img src="gambar/cewe.jfif" alt="Client 2">
             <div>
-              <div class="profile-name">Budi Hartanto</div>
-              <div class="profile-handle">@budi_hartanto02</div>
+              <h4>Sinta</h4>
+              <p>Owner, SintaMart</p>
             </div>
           </div>
         </div>
-
+        <div class="testimonial-card">
+          <div class="stars">★★★★☆</div>
+          <p>"Tim CargoWave sangat responsif dan profesional dalam menangani kebutuhan logistik kami."</p>
+          <div class="client-info">
+            <img src="gambar/cowo.jfif" alt="Client 3">
+            <div>
+              <h4>Anggara</h4>
+              <p>Manager, Anggara loco</p>
+            </div>
+          </div>
+        </div>
          <div class="testimonial-card">
           <div class="stars">★★★★☆</div>
-          <div class="quote">"Tim mereka responsif dan pengirimannya selalu tepat waktu.Bisa ngantar barang elektronik juga, Staffnya juga ramah-ramah"</div>
-          <div class="profile">
-            <img src="gambar/cewe.jfif" alt="Elsa">
+          <p>"Tim CargoWave bener-bener mempermudah pekerjaan deh pokoknya"</p>
+          <div class="client-info">
+            <img src="gambar/cewe.jfif" alt="Client 3">
             <div>
-              <div class="profile-name">Elsa Christina</div>
-              <div class="profile-handle">@Elsa_frozen</div>
+              <h4>Seyza</h4>
+              <p>Pegawai, Seyza florist</p>
+            </div>
+          </div>
+        </div>
+         <div class="testimonial-card">
+          <div class="stars">★★★★☆</div>
+          <p>"Tim CargoWave sangat responsif dan profesional dalam menangani kebutuhan logistik kami."</p>
+          <div class="client-info">
+            <img src="gambar/cowo.jfif" alt="Client 3">
+            <div>
+              <h4>Andrew</h4>
+              <p>Manager, Logistics Friend</p>
             </div>
           </div>
         </div>
@@ -195,19 +211,15 @@
     </div>
   </section>
 
- <script>
-    const container = document.getElementById("testimonialContainer");
-    const cardWidth = 320; // width of one testimonial card + gap
+  <script src="beranda.js"></script>
 
-    function scrollTestimonials(direction) {
-      container.scrollBy({
-        left: direction * cardWidth,
-        behavior: "smooth"
-      });
-    }
-  </script>
+  <!-- PANAH SCROLL -->
+<button class="scroll-down" id="scrollToggle" onclick="handleScrollToggle()">
+  <img id="scrollIcon" src="gambar/scrollDown.png" alt="Scroll Icon">
+</button>
 
   <!-- FOOTER -->
+   <footer id="footer">
  <footer class="site-footer">
   <div class="footer-content">
     <div class="footer-left">
@@ -224,5 +236,6 @@
     </div>
   </div>
 </footer>
+
 </body>
 </html>
