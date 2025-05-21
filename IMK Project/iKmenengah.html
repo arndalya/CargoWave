@@ -186,8 +186,8 @@
 </section>
 
 <!-- PANAH SCROLL -->
-<button class="scroll-down" onclick="window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });">
-  <img src="gambar/vector.png" alt="Scroll Down">
+<button class="scroll-down" id="scrollToggle" onclick="handleScrollToggle()">
+  <img id="scrollIcon" src="gambar/scrollDown.png" alt="Scroll Icon">
 </button>
 
 <!-- FOOTER -->
@@ -207,5 +207,33 @@
     </div>
   </div>
 </footer>
+<script>
+  const scrollBtn = document.getElementById("scrollToggle");
+  const scrollIcon = document.getElementById("scrollIcon");
+
+  function handleScrollToggle() {
+    if (window.scrollY < 400) {
+      // Scroll Down
+      window.scrollBy({
+        top: window.innerHeight,
+        behavior: "smooth"
+      });
+    } else {
+      // Scroll Up
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  }
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      scrollIcon.src = "gambar/scrollTop.png";
+    } else {
+      scrollIcon.src = "gambar/scrollDown.png";
+    }
+  });
+</script>
 </body>
 </html>
