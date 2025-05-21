@@ -385,10 +385,24 @@ body {
   text-align: center;
 }
 
-.testimonial-title {
-  font-size: 2rem;
+.testimonial-description {
+  margin-bottom: 40px;
+}
+
+.testimonial-title h3 {
+  font-size: 1rem;
   margin-bottom: 30px;
   color: #1e293b;
+}
+
+
+.testimonial-description {
+  font-size: 0.95rem; /* perkecil ukuran font */
+  max-width: 900px;   
+  margin: 0 auto 40px auto; /* tengah dan beri jarak bawah */
+  padding: 0 20px;   
+  color: #334155;     
+  line-height: 1.6;   
 }
 
 .testimonial-wrapper {
@@ -477,6 +491,8 @@ body {
   }
 } 
 
+
+/*PANAH ATAS BAWAH*/
   .scroll-down {
       position: fixed;
       bottom: 16px;
