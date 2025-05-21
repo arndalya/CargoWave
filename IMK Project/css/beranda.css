@@ -210,9 +210,6 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* .btn:hover {
-  background-color: #FFA630;
-} */
 
 /* FITUR */
 .features {
@@ -262,7 +259,7 @@ body {
 
 /* CARGO SECTION */
 .cargo-section {
-  max-width: 1300px;
+  max-width: 1400px;
   background: #cceeff;
   margin: auto;
   padding: 30px 25px;
@@ -301,8 +298,8 @@ body {
   background-color: white;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 16px 12px;           /* dikurangi padding vertikal & horizontal */
-  width: 220px;                 /* tetap ramping */
+  padding: 20px 15px;           /* dikurangi padding vertikal & horizontal */
+  width: 240px;                 /* tetap ramping */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -310,8 +307,9 @@ body {
   transition: transform 0.3s ease;
   height: auto;                /* bisa diatur juga jadi fixed kalau mau */
 }
+
 .card img {
-  width: 193px;
+  width: 196px;
   height: 112px;               /* dipendekkan dari default 150px */
   object-fit: cover;
   border-radius: 10px;
