@@ -77,34 +77,6 @@
       background-color: #073c7a;
     }
 
-    .scroll-down {
-      position: fixed;
-      bottom: 16px;
-      right: 20px;
-      background-color: #0950A1;
-      border: none;
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      z-index: 1000;
-      animation: bounce 1.5s infinite;
-    }
-
-    .scroll-down img {
-      width: 20px;
-      height: 20px;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(8px); }
-    }
-
     /* Footer override */
     .site-footer {
       background-color: #003049;
@@ -185,11 +157,6 @@
   </div>
 </section>
 
-<!-- PANAH SCROLL -->
-<button class="scroll-down" id="scrollToggle" onclick="handleScrollToggle()">
-  <img id="scrollIcon" src="gambar/scrollDown.png" alt="Scroll Icon">
-</button>
-
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-content">
@@ -207,33 +174,6 @@
     </div>
   </div>
 </footer>
-<script>
-  const scrollBtn = document.getElementById("scrollToggle");
-  const scrollIcon = document.getElementById("scrollIcon");
-
-  function handleScrollToggle() {
-    if (window.scrollY < 400) {
-      // Scroll Down
-      window.scrollBy({
-        top: window.innerHeight,
-        behavior: "smooth"
-      });
-    } else {
-      // Scroll Up
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    }
-  }
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 400) {
-      scrollIcon.src = "gambar/scrollTop.png";
-    } else {
-      scrollIcon.src = "gambar/scrollDown.png";
-    }
-  });
-</script>
+  
 </body>
 </html>
