@@ -36,13 +36,27 @@ function scrollTestimonials(direction) {
 
     scrollBtn.addEventListener("click", handleScrollToggle);
 
-    window.addEventListener("scroll", () => {
-      const isAtBottom = window.scrollY + window.innerHeight >= document.body.scrollHeight - 10;
+   window.addEventListener("scroll", () => {
+  const isAtBottom = window.scrollY + window.innerHeight >= document.body.scrollHeight - 10;
 
-      if (isAtBottom) {
-        scrollIcon.src = "gambar/scrollTop.png"; // Panah ke atas
-      } else {
-        scrollIcon.src = "gambar/scrollDown.png"; // Panah ke bawah
-      }
-    });
+  /*Ganti icon scroll*/
+  if (isAtBottom) {
+    scrollIcon.src = "gambar/scrollTop.png"; 
+  } else {
+    scrollIcon.src = "gambar/scrollDown.png"; 
+  }
+
+  /* Cek apakah footer terlihat*/
+  const footerTop = footer.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  /* Naikkan tombol jika menyentuh footer*/
+  if (footerTop < windowHeight) {
+    const overlap = windowHeight - footerTop + 16;
+    scrollBtn.style.bottom = `${overlap}px`;
+  } else {
+    scrollBtn.style.bottom = "16px";
+  }
+});
+
   });
