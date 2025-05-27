@@ -416,17 +416,20 @@ body {
 }
 
 .arrow {
-  font-size: 2rem;
   cursor: pointer;
-  color: #1e293b;
-  user-select: none;
   padding: 10px;
   transition: background 0.3s ease;
+  border-radius: 50%;
+}
+
+.arrow img {
+  width: 40px;   /* untuk ubah ukuran panahnya*/
+  height: auto;
+  display: block;
 }
 
 .arrow:hover {
   background-color: #e2e8f0;
-  border-radius: 50%;
 }
 
 .testimonial-track {
