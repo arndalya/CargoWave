@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - CargoWave</title>
+  <link rel="stylesheet" href="css/beranda.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffffff;
+    }
+
+    header {
+      background-color: #d3edff;
+      padding: 40px 20px;
+      text-align: center;
+      background-image: url('banner-placeholder.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .breadcrumb {
+      font-size: 14px;
+      padding: 15px 30px;
+      background-color: #f8f8f8;
+    }
+
+    .faq-section {
+      display: flex;
+      max-width: 1200px;
+      margin: 40px auto;
+      gap: 60px;
+      padding: 0 30px;
+    }
+
+    .faq-sidebar {
+      flex: 1;
+    }
+
+    .faq-sidebar h2 {
+      font-size: 24px;
+    }
+
+    .faq-sidebar p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .faq-sidebar a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .faq-sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .faq-content {
+      flex: 2;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ccc;
+      padding: 20px 0;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .faq-question h3 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .faq-answer {
+      margin-top: 10px;
+      font-size: 14px;
+      display: none;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-question .icon {
+      font-size: 24px;
+      color: #007bff;
+    }
+
+    footer {
+      background-color: #052440;
+      color: white;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .social-icons a {
+      margin-left: 15px;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .scroll-indicator {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 30px;
+      color: #007bff;
+    }
+    .scroll-down {
+      position: fixed;
+      bottom: 16px;
+      right: 20px;
+      background-color: #0950A1;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+      animation: bounce 1.5s infinite;
+    }
+
+    .scroll-down img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* Footer override */
+    .site-footer {
+      background-color: #003049;
+      color: white;
+      padding: 1rem 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container">
+    <div class="navbar-logo">
+      <img src="gambar/Logo.png" alt="Logo">
+    </div>
+    <nav>
+      <ul class="navbar-menu">
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="#">Layanan</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn active">Informasi ▾</a>
+          <ul class="dropdown-content">
+            <a href="iKmenengah.html">Kargo Menengah</a>
+            <a href="iKsedang.html">Kargo Sedang</a>
+            <a href="iKbesar.html">Kargo Besar</a>
+            <a href="iKserbaguna.html">Kargo Serbaguna</a>
+            <a href="iFAQ.html">FAQ</a>
+          </ul>
+        </li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="#">Kontak</a></li>
+        <li><a href="tentang_kami.html">Tentang Kami</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="layer lapisan-hitam-dasar"></div>
+  <div class="layer" style="background: url('gambar/FAQ hero section.png') center/cover no-repeat; z-index: 1;"></div>
+  <div class="layer lapisan-hitam-atas"></div>
+  <div class="hero-content">
+    <h1>INFORMASI</h1>
+    <p>Menampilkan pertanyaan-pertanyaan yang sering ditanyakan serta jawabannya atau Frequently Asked Questions (FAQ).</p>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<div style="max-width: 1200px; margin: 20px auto 0; padding: 0 25px; font-size: 14px; color: #555;">
+  <a href="beranda.html">Beranda</a>&gt;&gt;FAQ
+</div>
+
+<!-- FAQ SECTION -->
+  <section class="faq-section">
+    <div class="faq-sidebar">
+      <h2>FAQ</h2>
+      <p>Semua yang perlu Anda ketahui tentang produk dan penagihan. Tidak dapat menemukan jawaban yang Anda cari? <a href="#">Silakan bertanya kepada tim kami yang ramah</a></p>
+    </div>
+
+    <div class="faq-content">
+      <div class="faq-item active">
+        <div class="faq-question">
+          <h3>Apa itu CargoWave?</h3>
+          <span class="icon">−</span>
+        </div>
+        <div class="faq-answer">
+          <p>CargoWave adalah layanan pengiriman logistik berbasis laut untuk berbagai kebutuhan bisnis seperti UMKM, distributor, hingga industri besar.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Layanan apa saja yang tersedia di CargoWave?</h3>
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Kami menyediakan layanan kargo menengah, sedang, besar, dan serbaguna.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Berapa estimasi waktu pengiriman?</h3>
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Rata-rata estimasi waktu pengiriman adalah 3–7 hari kerja, tergantung rute dan jenis layanan.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Apakah CargoWave bisa kirim antar pulau?</h3>
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Ya, kami mendukung pengiriman antar pulau dengan rute pelayaran yang ada di Kepulauan Riau, Indonesia.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Bagaimana cara melacak kiriman saya?</h3>
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Anda dapat melacak kiriman dengan memasukkan nomor resi pada halaman layanan kami.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Metode pembayaran apa yang tersedia?</h3>
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Kami menerima pembayaran langsung atau cash payment.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Bagaimana jika barang saya rusak atau hilang?</h3>
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Barang yang rusak atau hilang akan ditangani melalui klaim asuransi yang tersedia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- PANAH SCROLL -->
+<button class="scroll-down" id="scrollToggle" onclick="handleScrollToggle()">
+  <img id="scrollIcon" src="gambar/scrollDown.png" alt="Scroll Icon">
+</button>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="gambar/Logo cargowave.png" alt="CargoWave Logo" class="footer-logo">
+    </div>
+    <div class="footer-center">
+      <p>© 2025 Cargo Wave. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <a href="http://www.instagram.com/cargowavelogistics" target="_blank"><img src="gambar/Instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="gambar/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="gambar/WA.png" alt="WhatsApp"></a>
+      <a href="#"><img src="gambar/linkin.png" alt="LinkedIn"></a>
+    </div>
+  </div>
+</footer>
+<script>
+  const scrollBtn = document.getElementById("scrollToggle");
+  const scrollIcon = document.getElementById("scrollIcon");
+
+  function handleScrollToggle() {
+    if (window.scrollY < 400) {
+      // Scroll Down
+      window.scrollBy({
+        top: window.innerHeight,
+        behavior: "smooth"
+      });
+    } else {
+      // Scroll Up
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  }
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      scrollIcon.src = "gambar/scrollTop.png";
+    } else {
+      scrollIcon.src = "gambar/scrollDown.png";
+    }
+  });
+</script>
+
+  <script>
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+      const question = item.querySelector(".faq-question");
+      question.addEventListener("click", () => {
+        faqItems.forEach(i => {
+          if (i !== item) i.classList.remove("active");
+        });
+        item.classList.toggle("active");
+        updateIcons();
+      });
+    });
+
+    function updateIcons() {
+      faqItems.forEach(item => {
+        const icon = item.querySelector(".icon");
+        icon.textContent = item.classList.contains("active") ? "−" : "+";
+      });
+    }
+    updateIcons();
+  </script>
+</body>
+</html>
