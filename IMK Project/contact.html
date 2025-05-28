@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak - CargoWave</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    body {
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header Section */
+    .header {
+      background-color: #d3edff;
+      padding: 60px 0;
+      text-align: center;
+      background-image: url('banner-placeholder.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      position: relative;
+    }
+    
+    .header h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .header p {
+      font-size: 16px;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    
+    /* Breadcrumb */
+    .breadcrumb {
+      padding: 15px 0;
+      font-size: 14px;
+      color: #555;
+    }
+    
+    .breadcrumb a {
+      color: #0950A1;
+      text-decoration: none;
+    }
+    
+    /* Contact Section */
+    .contact-section {
+      padding: 50px 0;
+    }
+    
+    .contact-section h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #0950A1;
+    }
+    
+    .contact-section p {
+      margin-bottom: 40px;
+      font-size: 16px;
+    }
+    
+    .office-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+    
+    .office-card {
+      flex: 1;
+      min-width: 300px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .office-card h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #003049;
+      border-bottom: 2px solid #0950A1;
+      padding-bottom: 10px;
+    }
+    
+    .office-card h4 {
+      font-size: 18px;
+      margin: 20px 0 10px;
+      color: #0950A1;
+    }
+    
+    .office-card p, 
+    .office-card a {
+      margin-bottom: 8px;
+      display: block;
+      color: #333;
+      text-decoration: none;
+    }
+    
+    .office-card a:hover {
+      color: #0950A1;
+      text-decoration: underline;
+    }
+    
+    /* Footer */
+    .site-footer {
+      background-color: #003049;
+      color: white;
+      padding: 30px 0;
+    }
+    
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .footer-logo {
+      height: 40px;
+    }
+    
+    .footer-center {
+      text-align: center;
+    }
+    
+    .footer-right a {
+      margin-left: 15px;
+    }
+    
+    .footer-right img {
+      width: 24px;
+      height: 24px;
+    }
+    
+    @media (max-width: 768px) {
+      .office-card {
+        min-width: 100%;
+      }
+      
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .footer-right {
+        margin-top: 20px;
+      }
+      
+      .footer-right a {
+        margin: 0 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="overlay"></div>
+    <div class="container">
+      <h1>KONTAK</h1>
+      <p>CargoWave siap membantu kebutuhan logistik maritim Anda dengan cepat dan profesional</p>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container breadcrumb">
+    <a href="beranda.html">Beranda</a> &gt;&gt; Kontak
+  </div>
+
+  <!-- Contact Section -->
+  <section class="container contact-section">
+    <h2>Hubungi Kami</h2>
+    <p>Jika Anda memiliki pertanyaan, permintaan layanan, atau membutuhkan informasi lebih lanjut, jangan ragu untuk menghubungi kami melalui formulir, email, atau nomor telepon yang tersedia. Tim kami akan segera merespons Anda.</p>
+    
+    <div class="office-container">
+      <!-- Kantor Pusat -->
+      <div class="office-card">
+        <h3>Kantor Pusat</h3>
+        <h4>Tanjungpinang</h4>
+        <p>Jl. Politeknik km. 24, Senggarang, Tanjungpinang Kota, Kota Tanjungpinang, Kepulauan Riau 29115, Indonesia</p>
+        <a href="tel:+6281234456789">+62 812 3445 6789 (Romi)</a>
+        <a href="mailto:idn-info@cargowavekepri.com">idn-info@cargowavekepri.com</a>
+        <a href="tel:+622112345678">+622112345678</a>
+      </div>
+      
+      <!-- Kantor Cabang Batam -->
+      <div class="office-card">
+        <h3>Kantor Cabang</h3>
+        <h4>Batam</h4>
+        <p>Executive Industrial Park Blok C No.12B Jl. Engku Putri No.12A, Belian, Batam Kota, Batam City, Riau Islands 29444</p>
+        <a href="tel:+6281265466643">+62 812 6546 6643 (Budi)</a>
+        <a href="mailto:idn-info@cargowavebatam.com">idn-info@cargowavebatam.com</a>
+        <a href="tel:+622134878912">+622134878912</a>
+      </div>
+      
+      <!-- Kantor Cabang Lingga -->
+      <div class="office-card">
+        <h3>Kantor Cabang</h3>
+        <h4>Lingga</h4>
+        <p>Jl. Kartini No.60, Batu Kacang, Kec. Singkep, Kabupaten Lingga, Kepulauan Riau 29871</p>
+        <a href="tel:+6281298753647">+62 812 9875 3647 (Tono)</a>
+        <a href="mailto:idn-info@cargowavelingga.com">idn-info@cargowavelingga.com</a>
+        <a href="tel:+6221876354728">+6221876354728</a>
+      </div>
+      
+      <!-- Kantor Cabang Natuna -->
+      <div class="office-card">
+        <h3>Kantor Cabang</h3>
+        <h4>Natuna</h4>
+        <p>Ranai Kota, East Bunguran, Natuna Regency, Riau Islands 29783, Indonesia</p>
+        <a href="tel:+6281254678765">+62 812 5467 8765 (Toni)</a>
+        <a href="mailto:idn-info@cargowavenatuna.com">idn-info@cargowavenatuna.com</a>
+        <a href="tel:+622187650398">+622187650398</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="gambar/Logo cargowave.png" alt="CargoWave Logo" class="footer-logo">
+      </div>
+      <div class="footer-center">
+        <p>© 2025 Cargo Wave. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <a href="http://www.instagram.com/cargowavelogistics" target="_blank"><img src="gambar/Instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="gambar/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="gambar/WA.png" alt="WhatsApp"></a>
+        <a href="#"><img src="gambar/linkin.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
