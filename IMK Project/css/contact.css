@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #ffff; /* Abu muda agar kontras dengan card putih */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*BAGIAN PUSAT dan CABANG*/
+.kontak-section {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.lokasi-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.3fr;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .lokasi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card11 {
+  background-color: #ccf2ff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card11 h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+.card11 .lokasi {
+  color: #888;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.card-container11 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* penting untuk sejajarkan vertikal */
+}
+
+.card-title h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+}
+
+.card-title .lokasi {
+  font-size: 14px;
+  font-weight: 600;
+  color: #777;
+  margin: 4px 0 0;
+}
+
+
+.map-container {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border-radius: 18px;
+  border: 0;
+}
+
