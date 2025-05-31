@@ -1,16 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kontak - CargoWave</title>
-  <link rel="stylesheet" href="css/beranda.css" />
-  <script src="beranda.js" defer></script>
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/beranda.css">
+  <script src="beranda.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
-
 <body>
+
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="container">
@@ -21,16 +23,16 @@
         <ul class="navbar-menu">
           <li><a href="beranda.html">Beranda</a></li>
           <li><a href="#">Layanan</a></li>
-          <li class="dropdown">
-            <a href="#">Informasi ▾</a>
+           <li class="dropdown">
+            <a href="#" class="dropbtn">Informasi ▾</a>
             <ul class="dropdown-content">
-              <a href="iKmenengah.html">Kargo Menengah</a>
-              <a href="iKsedang.html">Kargo Sedang</a>
-              <a href="iKbesar.html">Kargo Besar</a>
-              <a href="iKserbaguna.html">Kargo Serbaguna</a>
-              <a href="iFAQ.html">FAQ</a>
+              <li><a href="iKmenengah.html">Kargo Menengah</a></li>
+              <li><a href="iKsedang.html">Kargo Sedang</a></li>
+              <li><a href="iKbesar.html">Kargo Besar</a></li>
+              <li><a href="iKserbaguna.html">Kargo Serbaguna</a></li>
+              <li><a href="iFAQ.html">FAQ</a></li>
             </ul>
-          </li>
+           </li>
           <li><a href="berita.html">Berita</a></li>
           <li><a href="contact.html" class="active">Kontak</a></li>
           <li><a href="tentang_kami.html">Tentang Kami</a></li>
@@ -52,44 +54,76 @@
   </section>
 
   <!-- LOKASI KANTOR -->
-  <section class="cargo-section">
+  <section class="kontak-section">
     <h3 class="subheading">Lokasi Kantor:</h3>
-    <div class="card-container1">
-
-      <!-- Kantor Pusat -->
-      <div class="card1">
-        <img src="gambar/profil contact Tanjungpinang.png" alt="Kantor Pusat">
-        <h4>Kantor Pusat - Tanjungpinang</h4>
+    <div class="lokasi-grid">
+      <div class="card11">
+        <div class="card-header">
+        <img src="gambar/profil contact Tanjungpinang.png" alt="Kantor Tanjungpinang">
+        <div class="card-title">
+        <h4>Kantor Pusat</h4>
+        <p class="lokasi">Tanjungpinang</p>
+        </div>
+        </div>
         <p>Jl. Politeknik km. 24, Senggarang, Tanjungpinang Kota, Kepulauan Riau 29115</p>
-        <p><i class="fa-solid fa-phone"></i> +62 812 3445 6789 (Romi)</p>
+        <p><i class="fa-brands fa-whatsapp"></i> +62 812 3445 6789 (Romi)</p>
         <p><i class="fa-solid fa-envelope"></i> idn-info@cargowavekepri.com</p>
         <p><i class="fa-solid fa-phone-volume"></i> +622112345678</p>
       </div>
 
-      <!-- Kantor Batam -->
-      <div class="card1">
-        <img src="gambar/profil contact Tanjungpinang.png" alt="Kantor Cabang Batam">
-        <h4>Kantor Cabang - Batam</h4>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d4682.208616179632!2d104.43878201448962!3d0.9578682959018576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sGedung%20Fakultas%20Teknik%20dan%20Teknologi%20Kemaritiman%20UMRAH%20Senggarang%2C%20Tanjungpinang%2C%20Kepulauan%20Riau!5e1!3m2!1sid!2sid!4v1748706288037!5m2!1sid!2sid"
+         width="600" 
+         height="450" 
+         style="border:0;" 
+         allowfullscreen="" 
+         loading="lazy" 
+         referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="card-container11">
+      <div class="card11">
+         <div class="card-header">
+        <img src="gambar/profil contact Tanjungpinang.png" alt="Kantor Batam">
+        <div class="card-title">
+        <h4>Kantor Cabang</h4>
+        <p class="lokasi">Batam</p>
+        </div>
+        </div>
+
         <p>Executive Industrial Park Blok C No.12B, Batam Kota, Riau Islands 29444</p>
-        <p><i class="fa-solid fa-phone"></i> +62 812 6546 6643 (Budi)</p>
+        <p><i class="fa-brands fa-whatsapp"></i> +62 812 6546 6643 (Budi)</p>
         <p><i class="fa-solid fa-envelope"></i> idn-info@cargowavebatam.com</p>
         <p><i class="fa-solid fa-phone-volume"></i> +622134878912</p>
       </div>
 
-      <!-- Kantor Lingga -->
-      <div class="card1">
-        <img src="gambar/profil contact Tanjungpinang.png" alt="Kantor Cabang Lingga">
-        <h4>Kantor Cabang - Lingga</h4>
+      <div class="card11">
+        <div class="card-header">
+          <img src="gambar/profil contact Tanjungpinang.png" alt="Kantor Cabang Lingga">
+            <div class="card-title">
+            <h4>Kantor Cabang</h4>
+            <p class="lokasi">Lingga</p>
+          </div>
+        </div>
+
         <p>Jl. Kartini No.60, Batu Kacang, Kec. Singkep, Kepulauan Riau 29871</p>
-        <p><i class="fa-solid fa-phone"></i> +62 812 9875 3647 (Tono)</p>
+        <p><i class="fa-brands fa-whatsapp"></i> +62 812 9875 3647 (Tono)</p>
         <p><i class="fa-solid fa-envelope"></i> idn-info@cargowavelingga.com</p>
         <p><i class="fa-solid fa-phone-volume"></i> +6221876354728</p>
       </div>
 
-      <!-- Kantor Natuna -->
-      <div class="card1">
-        <img src="gambar/profil contact Tanjungpinang.png" alt="Kantor Cabang Natuna">
-        <h4>Kantor Cabang - Natuna</h4>
+      <div class="card11">
+       <div class="card-header">
+          <img src="gambar/profil contact Tanjungpinang.png" alt="Kantor Cabang Natuna">
+            <div class="card-title">
+            <h4>Kantor Cabang</h4>
+            <p class="lokasi">Natuna</p>
+          </div>
+        </div>
+
         <p>Ranai Kota, East Bunguran, Natuna, Riau Islands 29783</p>
         <p><i class="fa-brands fa-whatsapp"></i> +62 812 5467 8765 (Toni)</p>
         <p><i class="fa-solid fa-envelope"></i> idn-info@cargowavenatuna.com</p>
@@ -97,19 +131,6 @@
       </div>
     </div>
   </section>
-
-  <!-- GOOGLE MAP (Screenshot Map) -->
-  <section class="cargo-section">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.179763118678!2d104.44226287496747!3d0.9192885638963202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cf6f269eeac85f%3A0x64bc4fc3b5a1aa0!2sPoliteknik%20Negeri%20Batam!5e0!3m2!1sid!2sid!4v1717060047344!5m2!1sid!2sid"
-    width="100%"
-    height="400"
-    style="border:0; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</section>
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -120,12 +141,12 @@
       <div class="footer-center">
         <p>© 2025 Cargo Wave. All rights reserved.</p>
       </div>
-      <div class="footer-right">
-        <a href="#"><img src="gambar/Instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="gambar/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="gambar/WA.png" alt="WhatsApp"></a>
-        <a href="#"><img src="gambar/linkin.png" alt="LinkedIn"></a>
-      </div>
+     <div class="footer-right">
+      <a href="https://www.instagram.com/accounts/login/"><img src="gambar/Instagram.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/login/"><img src="gambar/facebook.png" alt="Facebook"></a>
+      <a href="https://web.whatsapp.com/"><img src="gambar/WA.png" alt="WhatsApp"></a>
+      <a href="https://www.linkedin.com/login/"><img src="gambar/linkin.png" alt="LinkedIn"></a>
+    </div>
     </div>
   </footer>
 
