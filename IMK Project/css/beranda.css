@@ -378,6 +378,22 @@ body {
   background-color: #012432;
 }
 
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #0950A1;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #073c7a;
+}
+
 /* TESTIMONI */
  .testimonial-section {
   padding: 60px 20px;
@@ -496,33 +512,33 @@ body {
 
 
 /*PANAH ATAS BAWAH*/
-  .scroll-down {
-      position: fixed;
-      bottom: 16px;
-      right: 20px;
-      background-color: #0950A1;
-      border: none;
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      z-index: 1000;
-      animation: bounce 1.5s infinite;
-    }
+.scroll-down {
+    position: fixed;
+    bottom: 16px;
+    right: 20px;
+    background-color: #0950A1;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+    animation: bounce 1.5s infinite;
+  }
 
-    .scroll-down img {
-      width: 20px;
-      height: 20px;
-    }
+  .scroll-down img {
+    width: 20px;
+    height: 20px;
+  }
 
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(8px); }
-    }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
 
 /* FOOTER */
 .site-footer {
@@ -585,7 +601,7 @@ body {
 }
 
 .card1 h4 {
-  font-size: 26px;       /* ✔️ lebih besar dari deskripsi */
+  font-size: 26px;       /* lebih besar dari deskripsi */
   font-weight: 700;
   color: #003049;
   margin-bottom: 16px;
@@ -593,7 +609,7 @@ body {
 
 .card1 img {
   width: 100%;
-  height: 170px;          /* ✔️ disesuaikan agar pas */
+  height: 170px;          /* disesuaikan agar pas */
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 16px;
@@ -603,7 +619,7 @@ body {
   font-size: 15px;
   line-height: 1.6;
   color: #000;
-  margin-bottom: 24px;   /* ✔️ memberi jarak dari button */
+  margin-bottom: 24px;   /* memberi jarak dari button */
   flex-grow: 1;
 }
 
@@ -611,7 +627,7 @@ body {
   padding: 10px 20px;
   font-size: 14px;
   font-weight: 600;
-  background-color: #0950A1;  /* ✔️ warna sesuai permintaan */
+  background-color: #0950A1;  /* warna sesuai permintaan */
   color: white;
   border: none;
   border-radius: 8px;
