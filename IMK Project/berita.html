@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Berita - CargoWave</title>
-  <link rel="stylesheet" href="css/beranda.css">
+  <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/berita.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
@@ -17,24 +17,25 @@
         <img src="gambar/Logo.png" alt="Logo CargoWave">
       </div>
       <nav>
-        <ul class="navbar-menu">
-          <li><a href="beranda.html">Beranda</a></li>
-          <li><a href="layanan.html">Layanan</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Informasi ▾</a>
-            <ul class="dropdown-content">
-              <li><a href="iKmenengah.html">Kargo Menengah</a></li>
-              <li><a href="iKsedang.html">Kargo Sedang</a></li>
-              <li><a href="iKbesar.html">Kargo Besar</a></li>
-              <li><a href="iKserbaguna.html">Kargo Serbaguna</a></li>
-              <li><a href="iFAQ.html">FAQ</a></li>
-            </ul>
-           </li>
-          <li><a href="berita.html" class="active">Berita</a></li>
-          <li><a href="contact.html">Kontak</a></li>
-          <li><a href="tentang_kami.html">Tentang Kami</a></li>
+      <ul class="navbar-menu">
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li class="dropdown">
+        <a href="#">Informasi ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="iKmenengah.html">Kargo Menengah</a></li>
+          <li><a href="iKsedang.html">Kargo Sedang</a></li>
+          <li><a href="iKbesar.html">Kargo Besar</a></li>
+          <li><a href="iKserbaguna.html">Kargo Serbaguna</a></li>
+          <li><a href="iFAQ.html">FAQ</a></li>
         </ul>
-      </nav>
+        </li>
+        <li><a href="berita.html" class="active">Berita</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+        <li><a href="tentang_kami.html">Tentang Kami</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
     </div>
   </header>
 
@@ -161,8 +162,15 @@
     </div>
   </section>
 
+  <script src="js/beranda.js"></script>
+
+  <!-- PANAH SCROLL -->
+  <button class="scroll-down" id="scrollToggle" onclick="handleScrollToggle()">
+    <img id="scrollIcon" src="gambar/scrollDown.png" alt="Scroll Icon">
+  </button>
+
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="site-footer" id="footer">
     <div class="footer-content">
       <div class="footer-left">
         <img src="gambar/Logo cargowave.png" alt="CargoWave Logo" class="footer-logo">
@@ -171,11 +179,11 @@
         <p>© 2025 Cargo Wave. All rights reserved.</p>
       </div>
        <div class="footer-right">
-      <a href="https://www.instagram.com/accounts/login/"><img src="gambar/Instagram.png" alt="Instagram"></a>
-      <a href="https://www.facebook.com/login/"><img src="gambar/facebook.png" alt="Facebook"></a>
-      <a href="https://web.whatsapp.com/"><img src="gambar/WA.png" alt="WhatsApp"></a>
-      <a href="https://www.linkedin.com/login/"><img src="gambar/linkin.png" alt="LinkedIn"></a>
-    </div>
+        <a href="https://www.instagram.com/accounts/login/"><img src="gambar/Instagram.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/login/"><img src="gambar/facebook.png" alt="Facebook"></a>
+        <a href="https://web.whatsapp.com/"><img src="gambar/WA.png" alt="WhatsApp"></a>
+        <a href="https://www.linkedin.com/login/"><img src="gambar/linkin.png" alt="LinkedIn"></a>
+      </div>
     </div>
   </footer>
 

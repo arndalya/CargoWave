@@ -19,14 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function handleScrollToggle() {
     const footerTop = footer.getBoundingClientRect().top + window.scrollY;
-    const isAtBottom = window.scrollY + window.innerHeight >= document.body.scrollHeight - 10;
+    const isAtBottom = window.scrollY + window.innerHeight >= document.body.scrollHeight - 50;
 
     if (!isAtBottom) {
-      window.scrollTo({
-        top: footerTop,
-        behavior: "smooth"
-      });
+      // Scroll ke bawah (footer)
+      footer.scrollIntoView({ behavior: "smooth" });
     } else {
+      // Scroll ke atas
       window.scrollTo({
         top: 0,
         behavior: "smooth"
@@ -34,7 +33,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function updateScrollIcon() {
+    const isAtBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 50;
+
+    scrollIcon.src = isAtBottom ? "gambar/scrollTop.png" : "gambar/scrollDown.png";
+
+    // Atur posisi tombol agar tidak menimpa footer
+    const footer = document.getElementById("footer");
+    const footerTop = footer.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (footerTop < windowHeight) {
+      const overlap = windowHeight - footerTop + 16;
+      scrollBtn.style.bottom = `${overlap}px`;
+    } else {
+      scrollBtn.style.bottom = "16px";
+    }
+  }
+
   scrollBtn.addEventListener("click", handleScrollToggle);
+  window.addEventListener("scroll", updateScrollIcon);
+  window.addEventListener("load", updateScrollIcon); // Tambahan ini penting
+});
 
   window.addEventListener("scroll", () => {
     const isAtBottom = window.scrollY + window.innerHeight >= document.body.scrollHeight - 10;
@@ -66,4 +86,4 @@ document.addEventListener("DOMContentLoaded", () => {
   if (burgerBtn) {
     burgerBtn.addEventListener("click", toggleMenu);
   }
-});
+

@@ -4,28 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isi Berita - CargoWave</title>
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/isi_berita.css">
     <link rel="stylesheet" href="css/berita.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 
 <!-- Navbar -->
-   <header class="navbar">
+  <header class="navbar">
         <div class="container">
             <div class="navbar-logo">
-                <img src="gambar/Logo.png" alt="Logo CargoWave">
-            </div>
-            <nav>
-                <ul class="navbar-menu">
-                    <li><a href="beranda.html">Beranda</a></li>
-                    <li><a href="layanan.html">Layanan</a></li>
-                    <li><a href="#">Informasi ▾</a></li>
-                    <li><a href="berita.html" class="active">Berita</a></li>
-                    <li><a href="#">Kontak</a></li>
-                    <li><a href="tentang_kami.html">Tentang Kami</a></li>
-                </ul>
-            </nav>
+            <img src="gambar/Logo.png" alt="Logo">
         </div>
+        <nav>
+            <ul class="navbar-menu">
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li class="dropdown">
+            <a href="#">Informasi ▾</a>
+            <ul class="dropdown-content">
+                <li><a href="iKmenengah.html">Kargo Menengah</a></li>
+                <li><a href="iKsedang.html">Kargo Sedang</a></li>
+                <li><a href="iKbesar.html">Kargo Besar</a></li>
+                <li><a href="iKserbaguna.html">Kargo Serbaguna</a></li>
+                <li><a href="iFAQ.html">FAQ</a></li>
+                </ul>
+                </li>
+                <li><a href="berita.html" class="active">Berita</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="tentang_kami.html">Tentang Kami</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </nav>
     </header>
 
  <div class="container">
@@ -37,10 +47,10 @@
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. 
           Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, 
           consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu.</p>
-        <p>Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. 
+          <p>Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. 
           Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, 
           sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, 
-        <p>viverra nec.Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, </p>
+          <p>viverra nec.Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, </p>
           gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.nterdum mollis sapien. Sed ac risus. 
           Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. 
           Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
@@ -72,8 +82,15 @@
   </div>
 </Section>
 
-<!-- Footer -->
-<footer class="site-footer">
+<script src="js/beranda.js"></script>
+
+  <!-- PANAH SCROLL -->
+  <button class="scroll-down" id="scrollToggle" onclick="handleScrollToggle()">
+    <img id="scrollIcon" src="gambar/scrollDown.png" alt="Scroll Icon">
+  </button>
+
+<!-- FOOTER -->
+<footer class="site-footer" id="footer">
   <div class="footer-content">
     <div class="footer-left">
       <img src="gambar/Logo cargowave.png" alt="CargoWave Logo" class="footer-logo">

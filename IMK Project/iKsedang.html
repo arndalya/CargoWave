@@ -4,86 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kargo Sedang - CargoWave</title>
-  <link rel="stylesheet" href="css/beranda.css" />
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/informasi.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-color: #ffffff;
-    }
-
-    .cargo-section {
-      background-color: #ffffff;
-      margin-top: 104px;
-      padding: 40px 20px;
-    }
-
-    .card-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 32px;
-    }
-
-    .card {
-      background-color: #cceeff;
-      width: 400px;
-      height: 472px;
-      border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 24px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .card h4 {
-      font-size: 24px;
-      font-weight: 700;
-      color: #000;
-      margin-bottom: 16px;
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 16px;
-    }
-
-    .card p {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #000;
-      flex-grow: 1;
-      margin-bottom: 16px;
-    }
-
-    .card button {
-      padding: 10px 20px;
-      font-size: 14px;
-      font-weight: 600;
-      background-color: #0950A1;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .card button:hover {
-      background-color: #073c7a;
-    }
-
-    /* Footer override */
-    .site-footer {
-      background-color: #003049;
-      color: white;
-      padding: 1rem 2rem;
-    }
-  </style>
 </head>
 <body>
 
@@ -96,21 +19,22 @@
     <nav>
       <ul class="navbar-menu">
         <li><a href="beranda.html">Beranda</a></li>
-        <li><a href="#">Layanan</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
         <li class="dropdown">
-          <a href="#" class="dropbtn active">Informasi ▾</a>
-          <ul class="dropdown-content">
-            <a href="iKmenengah.html">Kargo Menengah</a>
-            <a href="iKsedang.html">Kargo Sedang</a>
-            <a href="iKbesar.html">Kargo Besar</a>
-            <a href="iKserbaguna.html">Kargo Serbaguna</a>
-            <a href="iFAQ.html">FAQ</a>
-          </ul>
+        <a href="#">Informasi ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="iKmenengah.html">Kargo Menengah</a></li>
+          <li><a href="iKsedang.html" class="active">Kargo Sedang</a></li>
+          <li><a href="iKbesar.html">Kargo Besar</a></li>
+          <li><a href="iKserbaguna.html">Kargo Serbaguna</a></li>
+          <li><a href="iFAQ.html">FAQ</a></li>
+        </ul>
         </li>
         <li><a href="berita.html">Berita</a></li>
         <li><a href="contact.html">Kontak</a></li>
         <li><a href="tentang_kami.html">Tentang Kami</a></li>
       </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
   </div>
 </header>
@@ -133,32 +57,39 @@
 
 <!-- KARGO SEDANG SECTION -->
 <section class="cargo-section1">
-  <div class="card-container1">
-    <div class="card1">
+  <div class="card-container">
+    <div class="card">
       <h4>MV Andalas 02</h4>
       <img src="gambar/MV Andalas 02.png" alt="MV Andalas 02">
       <p>Kapal pengangkutan barang dengan tagihan minimum 100 kg yang berangkat dari <strong>Natuna ke Lingga</strong>, melayani rute antar pulau untuk kebutuhan logistik UMKM dan konstruksi ringan.</p>
-      <button>Cek ketersediaan kapal</button>
+      <a href="andalas2.html" class="btn">Cek ketersediaan kapal</a>
     </div>
 
-    <div class="card1">
+    <div class="card">
       <h4>KM Riau Sentosa</h4>
       <img src="gambar/KM Riau Sentosa.png" alt="KM Riau Sentosa">
       <p>Kapal kargo menengah dengan sistem tagihan minimum 100 kg, melayani pengiriman dari <strong>Tanjungpinang ke Batam</strong>, ideal untuk barang elektronik dan produk komersial.</p>
-      <button>Cek ketersediaan kapal</button>
+      <a href="riau_sentosa.html" class="btn">Cek ketersediaan kapal</a>
     </div>
 
-    <div class="card1">
+    <div class="card">
       <h4>KM Laut Teduh</h4>
       <img src="gambar/KM Laut Teduh.png" alt="KM Laut Teduh">
       <p>Kapal pengangkut barang skala menengah yang melayani rute dari <strong>Batam ke Tanjung Balai Karimun</strong>, dengan kebijakan minimal pengangkutan setara 100 kg.</p>
-      <button>Cek ketersediaan kapal</button>
+      <a href="laut_teduh.html" class="btn">Cek ketersediaan kapal</a>
     </div>
   </div>
 </section>
 
+<script src="js/beranda.js"></script>
+
+  <!-- PANAH SCROLL -->
+  <button class="scroll-down" id="scrollToggle" onclick="handleScrollToggle()">
+    <img id="scrollIcon" src="gambar/scrollDown.png" alt="Scroll Icon">
+  </button>
+
 <!-- FOOTER -->
-<footer class="site-footer">
+<footer class="site-footer" id="footer">
   <div class="footer-content">
     <div class="footer-left">
       <img src="gambar/Logo cargowave.png" alt="CargoWave Logo" class="footer-logo">

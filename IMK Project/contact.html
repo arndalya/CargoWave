@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kontak - CargoWave</title>
+  <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/contact.css">
-  <link rel="stylesheet" href="css/beranda.css">
   <script src="beranda.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
@@ -22,7 +22,7 @@
       <nav>
         <ul class="navbar-menu">
           <li><a href="beranda.html">Beranda</a></li>
-          <li><a href="#">Layanan</a></li>
+          <li><a href="layanan.html">Layanan</a></li>
            <li class="dropdown">
             <a href="#" class="dropbtn">Informasi ▾</a>
             <ul class="dropdown-content">
@@ -86,13 +86,13 @@
 
     <div class="card-container11">
       <div class="card11">
-         <div class="card-header">
-        <img src="gambar/profil contact Tanjungpinang.png" alt="Kantor Batam">
-        <div class="card-title">
-        <h4>Kantor Cabang</h4>
-        <p class="lokasi">Batam</p>
+        <div class="card-header">
+          <img src="gambar/profil contact Tanjungpinang.png" alt="Kantor Batam">
+          <div class="card-title">
+          <h4>Kantor Cabang</h4>
+          <p class="lokasi">Batam</p>
         </div>
-        </div>
+      </div>
 
         <p>Executive Industrial Park Blok C No.12B, Batam Kota, Riau Islands 29444</p>
         <p><i class="fa-brands fa-whatsapp"></i> +62 812 6546 6643 (Budi)</p>
@@ -132,8 +132,15 @@
     </div>
   </section>
 
+  <script src="js/beranda.js"></script>
+
+  <!-- PANAH SCROLL -->
+  <button class="scroll-down" id="scrollToggle" onclick="handleScrollToggle()">
+    <img id="scrollIcon" src="gambar/scrollDown.png" alt="Scroll Icon">
+  </button>
+
   <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="site-footer" id="footer">
     <div class="footer-content">
       <div class="footer-left">
         <img src="gambar/Logo cargowave.png" alt="CargoWave Logo" class="footer-logo">

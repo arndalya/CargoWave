@@ -4,152 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAQ - CargoWave</title>
-  <link rel="stylesheet" href="css/beranda.css" />
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/informasi.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-color: #ffffff;
-    }
-
-    header {
-      background-color: #d3edff;
-      padding: 40px 20px;
-      text-align: center;
-      background-image: url('banner-placeholder.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-    }
-
-    header h1 {
-      font-size: 36px;
-      margin: 0;
-    }
-
-    header p {
-      margin-top: 10px;
-      font-size: 14px;
-    }
-
-    .breadcrumb {
-      font-size: 14px;
-      padding: 15px 30px;
-      background-color: #f8f8f8;
-    }
-
-    .faq-section {
-      display: flex;
-      max-width: 1200px;
-      margin: 40px auto;
-      gap: 60px;
-      padding: 0 30px;
-    }
-
-    .faq-sidebar {
-      flex: 1;
-    }
-
-    .faq-sidebar h2 {
-      font-size: 24px;
-    }
-
-    .faq-sidebar p {
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    .faq-sidebar a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    .faq-sidebar a:hover {
-      text-decoration: underline;
-    }
-
-    .faq-content {
-      flex: 2;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid #ccc;
-      padding: 20px 0;
-    }
-
-    .faq-question {
-      display: flex;
-      justify-content: space-between;
-      cursor: pointer;
-    }
-
-    .faq-question h3 {
-      font-size: 18px;
-      margin: 0;
-    }
-
-    .faq-answer {
-      margin-top: 10px;
-      font-size: 14px;
-      display: none;
-    }
-
-    .faq-item.active .faq-answer {
-      display: block;
-    }
-
-    .faq-question .icon {
-      font-size: 24px;
-      color: #007bff;
-    }
-
-    .social-icons a {
-      margin-left: 15px;
-      color: white;
-      font-size: 18px;
-      text-decoration: none;
-    }
-
-    .scroll-indicator {
-      text-align: center;
-      margin: 30px 0;
-      font-size: 30px;
-      color: #007bff;
-    }
-    .scroll-down {
-      position: fixed;
-      bottom: 16px;
-      right: 20px;
-      background-color: #0950A1;
-      border: none;
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      z-index: 1000;
-      animation: bounce 1.5s infinite;
-    }
-
-    .scroll-down img {
-      width: 20px;
-      height: 20px;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(8px); }
-    }
-
-    /* Footer override */
-    .site-footer {
-      background-color: #003049;
-      color: white;
-      padding: 1rem 2rem;
-    }
-  </style>
 </head>
 <body>
 
@@ -162,21 +19,22 @@
     <nav>
       <ul class="navbar-menu">
         <li><a href="beranda.html">Beranda</a></li>
-        <li><a href="#">Layanan</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
         <li class="dropdown">
-          <a href="#" class="dropbtn active">Informasi ▾</a>
-          <ul class="dropdown-content">
-            <a href="iKmenengah.html">Kargo Menengah</a>
-            <a href="iKsedang.html">Kargo Sedang</a>
-            <a href="iKbesar.html">Kargo Besar</a>
-            <a href="iKserbaguna.html">Kargo Serbaguna</a>
-            <a href="iFAQ.html">FAQ</a>
-          </ul>
+        <a href="#">Informasi ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="iKmenengah.html">Kargo Menengah</a></li>
+          <li><a href="iKsedang.html">Kargo Sedang</a></li>
+          <li><a href="iKbesar.html">Kargo Besar</a></li>
+          <li><a href="iKserbaguna.html">Kargo Serbaguna</a></li>
+          <li><a href="iFAQ.html" class="active">FAQ</a></li>
+        </ul>
         </li>
         <li><a href="berita.html">Berita</a></li>
         <li><a href="contact.html">Kontak</a></li>
         <li><a href="tentang_kami.html">Tentang Kami</a></li>
       </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
   </div>
 </header>
@@ -201,7 +59,7 @@
   <section class="faq-section">
     <div class="faq-sidebar">
       <h2>FAQ</h2>
-      <p>Semua yang perlu Anda ketahui tentang produk dan penagihan. Tidak dapat menemukan jawaban yang Anda cari? <a href="#">Silakan bertanya kepada tim kami yang ramah</a></p>
+      <p>Semua yang perlu Anda ketahui tentang produk dan penagihan. Tidak dapat menemukan jawaban yang Anda cari? <a href="https://web.whatsapp.com/">Silakan bertanya kepada tim kami yang ramah</a></p>
     </div>
 
     <div class="faq-content">
@@ -277,13 +135,15 @@
     </div>
   </section>
 
-<!-- PANAH SCROLL -->
-<button class="scroll-down" id="scrollToggle" onclick="handleScrollToggle()">
-  <img id="scrollIcon" src="gambar/scrollDown.png" alt="Scroll Icon">
-</button>
+  <script src="js/beranda.js"></script>
+
+  <!-- PANAH SCROLL -->
+  <button class="scroll-down" id="scrollToggle" onclick="handleScrollToggle()">
+    <img id="scrollIcon" src="gambar/scrollDown.png" alt="Scroll Icon">
+  </button>
 
 <!-- FOOTER -->
-<footer class="site-footer">
+<footer class="site-footer" id="footer">
   <div class="footer-content">
     <div class="footer-left">
       <img src="gambar/Logo cargowave.png" alt="CargoWave Logo" class="footer-logo">

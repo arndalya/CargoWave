@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tentang Kami - CargoWave</title>
-  <link rel ="stylesheet" href="css/beranda.css">
+  <link rel ="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/tentang_kami.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
@@ -34,6 +34,7 @@
           <li><a href="contact.html">Kontak</a></li>
           <li><a href="tentang_kami.html" class="active">Tentang Kami</a></li>
         </ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
       </nav>
     </div>
   </header>
@@ -113,7 +114,14 @@
     </div>
   </section>
 
-  <footer class="site-footer">
+  <script src="js/beranda.js"></script>
+
+  <!-- PANAH SCROLL -->
+  <button class="scroll-down" id="scrollToggle" onclick="handleScrollToggle()">
+    <img id="scrollIcon" src="gambar/scrollDown.png" alt="Scroll Icon">
+  </button>
+
+  <footer class="site-footer" id="footer">
     <div class="footer-content">
       <div class="footer-left">
         <img src="gambar/Logo cargowave.png" alt="CargoWave Logo" class="footer-logo">
