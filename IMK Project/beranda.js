@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /** ==========================
    *  TOGGLE MENU NAVBAR MOBILE
    * ========================== */
-  const burgerBtn = document.querySelector(".burger-button"); // pastikan tombol punya class ini
+  const burgerBtn = document.querySelector(".burger-button"); 
   const menu = document.querySelector(".navbar-menu");
 
   function toggleMenu() {

@@ -7,6 +7,14 @@
 body {
   font-family: 'Inter', sans-serif;
   background-color: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* NAVBAR */
@@ -51,6 +59,20 @@ body {
   padding: 8px 12px;
   transition: background-color 0.3s ease, color 0.3s ease;
   border-radius: 10px;
+}
+
+.navbar-menu li a.active {
+    color: #FFA630;
+  }
+
+
+.dropdown-content {
+  list-style: none; /* hilangkan bullet */
+  padding: 0;
+  margin: 0;
+}
+.dropdown-content li {
+  margin: 0; /* atau sesuaikan spacing */
 }
 
 /* Hover effect */
@@ -99,23 +121,46 @@ body {
   color: #003366;
 }
 
-@media (max-width: 768px) {
-  .nav-menu {
+@media (max-width: 1100px) {
+  .navbar-menu {
     flex-direction: column;
+    align-items: center;
     background-color: #cceeff;
+    padding: 1rem 0;
     position: absolute;
     top: 60px;
     right: 0;
     width: 100%;
     display: none;
+    z-index: 10;
+    border-top: 1px solid #ccc
   }
 
-  .nav-menu.active {
-    display: flex;
+  .navbar-menu.active {
+    display: block;
   }
 
   .hamburger {
     display: block;
+  }
+
+  .navbar-menu a {
+    text-align: center;
+    padding: 0.75rem 1rem;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .navbar-menu a:hover{
+    background-color: #f2f2f2;
+    color: #007bff;
+  }
+
+  .navbar-menu li a.active {
+    color: #FFA630;
   }
 
   .dropdown:hover .dropdown-content {
@@ -131,8 +176,15 @@ body {
   }
 }
 
-.navbar-menu li a.active {
-  color: #FFA630;
+.nav-row {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #333;
 }
 
 /* HERO SECTION*/

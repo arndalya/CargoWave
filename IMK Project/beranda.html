@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beranda - CargoWave</title>
-  <link rel="stylesheet" href="css/beranda.css">
-  <script src="beranda.js"></script>
+  <link rel="stylesheet" href="css/detail_kapal.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="beranda.js"></script>
 </head>
 
 <script>
@@ -32,10 +32,14 @@
     currentSlide--;
     updateSlide();
   }
+
+  function toggleMenu() {
+    const menu = document.querySelector('.navbar-menu');
+    menu.classList.toggle("active");
+  }
 </script> 
 
 <body>
-
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="container">
@@ -44,21 +48,21 @@
     </div>
     <nav>
       <ul class="navbar-menu">
-      <li><a href="beranda.html"class="active">Beranda</a></li>
-      <li><a href="#">Layanan</a></li>
-      <li class="dropdown">
-      <a href="#">Informasi ▾</a>
-      <ul class="dropdown-content">
+        <li><a href="beranda.html"class="active">Beranda</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li class="dropdown">
+        <a href="#">Informasi ▾</a>
+        <ul class="dropdown-content">
           <li><a href="iKmenengah.html">Kargo Menengah</a></li>
           <li><a href="iKsedang.html">Kargo Sedang</a></li>
           <li><a href="iKbesar.html">Kargo Besar</a></li>
           <li><a href="iKserbaguna.html">Kargo Serbaguna</a></li>
           <li><a href="iFAQ.html">FAQ</a></li>
-      </ul>
-      </li>
-      <li><a href="berita.html">Berita</a></li>
-      <li><a href="contact.html">Kontak</a></li>
-      <li><a href="tentang_kami.html">Tentang Kami</a></li>
+        </ul>
+        </li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+        <li><a href="tentang_kami.html">Tentang Kami</a></li>
       </ul>
       <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
@@ -219,9 +223,9 @@
   <script src="beranda.js"></script>
 
   <!-- PANAH SCROLL -->
-<button class="scroll-down" id="scrollToggle" onclick="handleScrollToggle()">
-  <img id="scrollIcon" src="gambar/scrollDown.png" alt="Scroll Icon">
-</button>
+  <button class="scroll-down" id="scrollToggle" onclick="handleScrollToggle()">
+    <img id="scrollIcon" src="gambar/scrollDown.png" alt="Scroll Icon">
+  </button>
 
 <!-- FOOTER -->
 <footer class="site-footer">
