@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layanan - CargoWave</title>
+  <link rel="icon" type="image/png" href="gambar/cargo-icon.png">
+  <link rel="stylesheet" href="css/beranda.css">
+  <link rel="stylesheet" href="css/layanan.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-container">
+      <a class="navbar-brand" href="index.html">
+        <img src="gambar/Logo.png" alt="CargoWave Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="beranda.html">Beranda</a></li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              Layanan
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="kargo-darat.html">Kargo Darat</a>
+              <a class="dropdown-item" href="kargo-laut.html">Kargo Laut</a>
+              <a class="dropdown-item" href="kargo-udara.html">Kargo Udara</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a></li>
+          <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang_kami.html">Tentang Kami</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section-->
+  <section class="hero">
+    <div class="hero-background">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <h3 class="hero-subtitle">Solusi Logistik Terbaik</h3>
+        <h1 class="hero-title">Layanan Kami</h1>
+        <p class="hero-description">Temukan berbagai layanan pengiriman kargo dari CargoWave yang dirancang untuk kebutuhan bisnis Anda: cepat, aman, dan terpercaya ke seluruh Indonesia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content (Empty) -->
+  <main style="min-height: 400px;">
+    <div class="tracking-section">
+        <div class="tracking-header">
+          <h2>LACAK BARANG ANDA</h2>
+          <div class="tracking-form">
+            <input id="tracking-input" type="text" placeholder="Masukkan nomor resi" />
+            <button id="tracking-button">Lacak</button>
+          </div>
+        </div>
+
+        <!-- Tracking Empty State -->
+        <div id="tracking-empty" class="show">
+          <p>Masukkan nomor resi untuk melacak pengiriman Anda.</p>
+        </div>
+
+        <!-- Tracking Loading/Search State -->
+        <div id="tracking-search" class="hide">
+          <p>Mencari data pengiriman... <span class="loader"></span></p>
+        </div>
+
+        <!-- Tracking Error State -->
+        <div id="tracking-error" class="hide">
+          <p id="tracking-error-message" class="tracking-error-message" style="color: red;">Nomor resi tidak ditemukan. Silakan periksa kembali nomor resi Anda.</p>
+        </div>
+
+        <div class="tracking-body hide" id="tracking-result">
+          <div class="tracking-info">
+            <div class="stepper-wrapper" id="stepper-wrapper">
+              <!-- Stepper items will be inserted here dynamically -->
+            </div>
+    
+            <section id="tracking-info-section" class="tracking-info-section">
+              <h3>
+                <span id="shipment-id" class="shipment-id">SHP-5567</span>
+              </h3>
+              <p><strong>Nama:</strong> <span id="shipment-nama" class="shipment-nama">Agus</span></p>
+              <p><strong>Tanggal Pengiriman:</strong> <span id="shipment-tanggal" class="shipment-tanggal">15 April 2025</span></p>
+              <p><strong>Nomor Resi:</strong> <span id="shipment-resi" class="shipment-resi">Order-12345</span></p>
+              <p><strong>Alamat:</strong> <span id="shipment-alamat" class="shipment-alamat">Jl. Merdeka No. 123, Jakarta</span></p>
+            </section>
+
+            <div class="timeline-wrapper">
+              <div class="timeline-item active">
+                <div class="timeline-dot"></div>
+                <div class="timeline-item-content">
+                  <div class="timeline-item-header">
+                    <span class="date">9 Februari 2025</span>
+                    <span class="time">14:25</span>
+                  </div>
+                  <div class="timeline-item-description">
+                    Pesanan tiba di alamat tujuan.
+                  </div>
+                </div>
+              </div>
+            
+              <div class="timeline-item active">
+                <div class="timeline-dot"></div>
+                <div class="timeline-item-content">
+                  <div class="timeline-item-header">
+                    <span class="date">10 Februari 2025</span>
+                    <span class="time">06:43</span>
+                  </div>
+                  <div class="timeline-item-description">
+                    Pesanan dalam proses pengantaran
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-item-content">
+                  <div class="timeline-item-header">
+                    <span class="date">10 Februari 2025</span>
+                    <span class="time">10:45</span>
+                  </div>
+                  <div class="timeline-item-description">
+                    Pesanan dalam proses transit
+                  </div>
+                </div>
+              </div>
+            </div>            
+                                  
+          </div>
+    
+          <div class="map-container" id="map"></div>
+        </div>
+      </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="gambar/Logo cargowave.png" alt="CargoWave Logo" class="footer-logo">
+      </div>
+      <div class="footer-center">
+        <p>© 2025 Cargo Wave. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#"><img src="gambar/Instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="gambar/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="gambar/WA.png" alt="WhatsApp"></a>
+        <a href="#"><img src="gambar/linkin.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/tracking.js"></script>
+</body>
+</html>
