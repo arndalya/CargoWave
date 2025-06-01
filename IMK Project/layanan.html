@@ -5,54 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Layanan - CargoWave</title>
   <link rel="icon" type="image/png" href="gambar/cargo-icon.png">
-  <link rel="stylesheet" href="css/beranda.css">
+  <link rel="stylesheet" href="css/detail_kapal.css">
   <link rel="stylesheet" href="css/layanan.css">
+  <script src="js/beranda.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.navbar-menu');
+    menu.classList.toggle("active");
+  }
+</script>
+
 <body>
   <!-- Navbar -->
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="navbar-container">
-      <a class="navbar-brand" href="index.html">
-        <img src="gambar/Logo.png" alt="CargoWave Logo" height="40">
-      </a>
-      <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="beranda.html">Beranda</a></li>
-          <li class="nav-item dropdown active">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              Layanan
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="kargo-darat.html">Kargo Darat</a>
-              <a class="dropdown-item" href="kargo-laut.html">Kargo Laut</a>
-              <a class="dropdown-item" href="kargo-udara.html">Kargo Udara</a>
-            </div>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a></li>
-          <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
-          <li class="nav-item"><a class="nav-link" href="tentang_kami.html">Tentang Kami</a></li>
-        </ul>
-      </div>
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-logo">
+      <img src="gambar/Logo.png" alt="Logo">
     </div>
-  </nav>
+    <nav>
+      <ul class="navbar-menu">
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="layanan.html" class="active">Layanan</a></li>
+        <li class="dropdown">
+        <a href="#">Informasi ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="iKmenengah.html">Kargo Menengah</a></li>
+          <li><a href="iKsedang.html">Kargo Sedang</a></li>
+          <li><a href="iKbesar.html">Kargo Besar</a></li>
+          <li><a href="iKserbaguna.html">Kargo Serbaguna</a></li>
+          <li><a href="iFAQ.html">FAQ</a></li>
+        </ul>
+        </li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+        <li><a href="tentang_kami.html">Tentang Kami</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
 
   <!-- Hero Section-->
   <section class="hero">
-    <div class="hero-background">
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="container">
-      <div class="hero-content">
-        <h3 class="hero-subtitle">Solusi Logistik Terbaik</h3>
-        <h1 class="hero-title">Layanan Kami</h1>
-        <p class="hero-description">Temukan berbagai layanan pengiriman kargo dari CargoWave yang dirancang untuk kebutuhan bisnis Anda: cepat, aman, dan terpercaya ke seluruh Indonesia.</p>
-      </div>
+    <div class="layer lapisan-hitam-dasar"></div>
+    <div class="layer lapisan-gambar"></div>
+    <div class="layer lapisan-hitam-atas"></div>
+    <div class="hero-content">
+      <h1>LAYANAN KAMI</h1>
+      <p>
+        Temukan berbagai layanan pengiriman kargo dari CargoWave yang dirancang untuk kebutuhan bisnis Anda: cepat, aman, dan terpercaya ke seluruh Indonesia.
+      </p>
     </div>
   </section>
 
