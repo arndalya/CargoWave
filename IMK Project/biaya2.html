@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Biaya Pengiriman - CargoWave</title>
   <link rel="stylesheet" href="css/global.css"/>
-  <link rel="stylesheet" href="css/informasi.css"/>
-  <link rel="stylesheet" href="css/beranda.css"/>
   <link rel="stylesheet" href="css/biaya2.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -16,7 +14,7 @@
 <header class="navbar">
   <div class="container">
     <div class="navbar-logo">
-      <img src="gambar/Logo.png" alt="Logo">
+      <img src="gambar/Logo.png" alt="Logo CargoWave">
     </div>
     <nav>
       <ul class="navbar-menu">
@@ -43,30 +41,32 @@
 
 <!-- HERO SECTION -->
 <section class="hero">
-  <div class="layer lapisan-hitam-dasar"></div>
-  <div class="layer" style="background: url('gambar/gambar hero section.png') center/cover no-repeat; z-index: 1;"></div>
-  <div class="layer lapisan-hitam-atas"></div>
+   <div class="layer lapisan-hitam-dasar"></div>
+    <div class="layer lapisan-gambar"></div>
+    <div class="layer lapisan-hitam-atas"></div>
   <div class="hero-content">
     <h1>BIAYA PENGIRIMAN</h1>
-    <p>Lihat estimasi biaya berdasarkan bobot dan jenis kapal</p>
+    <p>Ayo hitung estimasi biaya yang harus kamu keluarkan dengan bobot paket mu disini</p>
   </div>
 </section>
 
 <!-- FORM KALKULASI -->
-<section style="padding: 50px 20px; background-color: #f5f5f5;">
-  <div style="max-width:600px; margin:0 auto;">
+<section class="form-section">
+  <div class="form-container">
     <h2>Hitung Biaya Pengiriman</h2>
+
     <label for="jenisKapal">Pilih Jenis Kapal:</label>
     <select id="jenisKapal">
+      <option value="" disabled selected>--</option>
       <option value="menengah">Kapal Menengah</option>
       <option value="sedang">Kapal Sedang</option>
       <option value="besar">Kapal Besar</option>
       <option value="serbaguna">Kapal Serbaguna</option>
     </select>
-    <br><br>
+
     <label for="bobot">Masukkan Bobot Barang (kg):</label>
-    <input type="number" id="bobot" min="1" />
-    <br><br>
+    <input type="number" id="bobot" min="1" placeholder="Contoh: 150" />
+
     <button onclick="hitungBiaya()">Hitung Biaya</button>
     <h3 id="hasilBiaya"></h3>
   </div>
@@ -82,21 +82,20 @@
       <p>© 2025 Cargo Wave. All rights reserved.</p>
     </div>
     <div class="footer-right">
-      <a href="#"><img src="gambar/Instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="gambar/facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="gambar/WA.png" alt="WhatsApp"></a>
-      <a href="#"><img src="gambar/linkin.png" alt="LinkedIn"></a>
+     <a href="https://www.instagram.com/accounts/login/"><img src="gambar/Instagram.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/login/"><img src="gambar/facebook.png" alt="Facebook"></a>
+        <a href="https://web.whatsapp.com/"><img src="gambar/WA.png" alt="WhatsApp"></a>
+        <a href="https://www.linkedin.com/login/"><img src="gambar/linkin.png" alt="LinkedIn"></a>
     </div>
   </div>
 </footer>
 
-<!-- JS Kalkulasi Biaya -->
 <script>
-  const tarifPerKapal = {
-    menengah: 2500,     // per 50kg
-    sedang: 2000,
-    besar: 1800,
-    serbaguna: 3000
+  const tarifPerKg = {
+    menengah: 11000,
+    sedang: 13000,
+    besar: 15000,
+    serbaguna: 18000
   };
 
   function hitungBiaya() {
@@ -108,10 +107,12 @@
       return;
     }
 
-    const kelipatan50 = Math.ceil(bobot / 50);
-    const harga = kelipatan50 * tarifPerKapal[jenis];
+    const bobotFinal = Math.max(bobot, 100); 
+    // minimal 100kg, bukan berarti barangnya harus 100kg baru bisa berangkat tetapi yang wajib dipenuhi adalah nilai tagihan yang setara dengan 100kg
+    const harga = bobotFinal * tarifPerKg[jenis];
 
-    document.getElementById("hasilBiaya").innerText = `💸 Total Biaya: Rp ${harga.toLocaleString("id-ID")}`;
+    document.getElementById("hasilBiaya").innerText =
+      `💸 Total Biaya: Rp ${harga.toLocaleString("id-ID")} (${bobotFinal} kg x Rp ${tarifPerKg[jenis].toLocaleString("id-ID")}/kg)`;
   }
 </script>
 
