@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Biaya Pengiriman - CargoWave</title>
+  <link rel="icon" href="gambar/cargo-icon.png" type="image/png">
   <link rel="stylesheet" href="css/global.css"/>
   <link rel="stylesheet" href="css/biaya2.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -35,6 +36,7 @@
         <li><a href="contact.html">Kontak</a></li>
         <li><a href="tentang_kami.html">Tentang Kami</a></li>
       </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
   </div>
 </header>
@@ -113,6 +115,12 @@
 
     document.getElementById("hasilBiaya").innerText =
       `💸 Total Biaya: Rp ${harga.toLocaleString("id-ID")} (${bobotFinal} kg x Rp ${tarifPerKg[jenis].toLocaleString("id-ID")}/kg)`;
+  }
+
+   // Tambahkan fungsi ini
+  function toggleMenu() {
+    const menu = document.querySelector('.navbar-menu');
+    menu.classList.toggle('active');
   }
 </script>
 
